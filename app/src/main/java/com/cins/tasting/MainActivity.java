@@ -1,8 +1,10 @@
 package com.cins.tasting;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import com.cins.tasting.textview.MyTextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -16,7 +18,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     switch (view.getId()) {
       //基本组件
       case R.id.bt_textview:
-
+        Intent intent = new Intent(this, MyTextView.class);
+        startActivity(intent);
         break;
       case R.id.bt_imageview:
         break;
