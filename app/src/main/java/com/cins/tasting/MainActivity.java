@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import com.cins.tasting.bottomsheets.MyBottomSheets;
 import com.cins.tasting.dialog.MyDialogActivity;
 import com.cins.tasting.textview.MyTextView;
 
@@ -16,10 +17,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
   }
 
   @Override public void onClick(View view) {
+    Intent intent;
     switch (view.getId()) {
       //基本组件
       case R.id.bt_textview:
-        Intent intent = new Intent(this, MyTextView.class);
+        intent = new Intent(this, MyTextView.class);
         startActivity(intent);
         break;
       case R.id.bt_imageview:
@@ -27,12 +29,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
       case R.id.bt_viewpage:
         break;
       case R.id.bt_dialog:
-        Intent intent1 = new Intent(this, MyDialogActivity.class);
-        startActivity(intent1);
+        intent = new Intent(this, MyDialogActivity.class);
+        startActivity(intent);
         break;
       case R.id.bt_toast:
         break;
       case R.id.bt_checkbox:
+        break;
+      case R.id.bt_bottomsheet:
+        intent = new Intent(this, MyBottomSheets.class);
+        startActivity(intent);
         break;
     }
   }

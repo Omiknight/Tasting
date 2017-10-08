@@ -45,6 +45,8 @@ public class MyDialogActivity extends AppCompatActivity implements
         Toast.makeText(getApplicationContext(), "you click sure", Toast.LENGTH_LONG).show();
       }
     });
+    //点击外面不取消Dialog
+    builder.setCancelable(false);
     builder.create().show();
   }
 
