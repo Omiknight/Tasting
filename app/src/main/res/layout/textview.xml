@@ -43,6 +43,7 @@
       />
 
   <TextView
+      android:id="@+id/textView"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_centerInParent="true"
@@ -51,6 +52,15 @@
       android:drawableTop="@mipmap/ic_launcher"
       android:text="带图片的 textview"
       android:textColor="@color/colorAccent"
+      />
+
+  <TextView
+      android:id="@+id/tv_another"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="10dp"
+      android:drawablePadding="6dp"
+      android:text="另一种设置 icon"
       />
 
   <TextView
@@ -77,5 +87,19 @@
       android:textSize="18sp"
       />
 
+  <TextView
+      android:layout_width="70dp"
+      android:layout_height="40dp"
+      android:layout_marginTop="10dp"
+      android:background="@drawable/tv_shadow"
+      android:text="23333333"
+      />
+
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:autoSizeTextType="uniform"
+      android:text="市场的房间啊回复垃圾卡复活的路口附近的恢复大方"
+      />
 
 </LinearLayout>
