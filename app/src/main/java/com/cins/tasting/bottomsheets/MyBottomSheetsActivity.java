@@ -13,7 +13,7 @@ import com.cins.tasting.R;
  * Created by jinjianping on 2017/10/8.
  */
 
-public class MyBottomSheets extends AppCompatActivity {
+public class MyBottomSheetsActivity extends AppCompatActivity {
 
   BottomSheetBehavior behavior;
 
@@ -53,5 +53,17 @@ public class MyBottomSheets extends AppCompatActivity {
         new FullSheetDialogFragment().show(getSupportFragmentManager(), "dialog");
         break;
     }
+  }
+
+  /**
+   * 要带 View 参数
+   * @param view
+   */
+  public void openCustomeDialog(View view) {
+    CustomDialog.newInstance(this, new CustomDialog.DialogCallback() {
+      @Override public void onSuccess(String msg) {
+
+      }
+    }).show();
   }
 }

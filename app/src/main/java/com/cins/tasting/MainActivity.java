@@ -4,7 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import com.cins.tasting.bottomsheets.MyBottomSheets;
+import com.cins.tasting.bottomsheets.MyBottomSheetsActivity;
 import com.cins.tasting.dialog.MyDialogActivity;
 import com.cins.tasting.textview.MyTextView;
 
@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
       case R.id.bt_checkbox:
         break;
       case R.id.bt_bottomsheet:
-        intent = new Intent(this, MyBottomSheets.class);
+        intent = new Intent(this, MyBottomSheetsActivity.class);
         startActivity(intent);
         break;
     }

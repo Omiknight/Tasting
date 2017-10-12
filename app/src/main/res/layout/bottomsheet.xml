@@ -50,6 +50,15 @@
           android:onClick="onClick"
           android:text="BottomSheetDialogFragment"
           />
+
+      <Button
+          android:id="@+id/bt_customDialog"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="10dp"
+          android:onClick="openCustomeDialog"
+          android:text="CustomDialog"
+          />
     </LinearLayout>
   </LinearLayout>
 
