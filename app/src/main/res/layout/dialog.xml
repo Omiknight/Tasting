@@ -24,6 +24,13 @@
         >
 
       <Button
+          android:id="@+id/bt_cusdialog"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="SHOW cusDIALOG"
+          />
+
+      <Button
           android:id="@+id/bt_dialog"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"

@@ -12,6 +12,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import com.cins.tasting.R;
+import com.cins.tasting.bottomsheets.CustomDialog;
 
 /**
  * Created by jinjianping on 2017/10/7.
@@ -54,6 +55,12 @@ public class MyDialogActivity extends AppCompatActivity implements
   public void showDialogFrag() {
     MyDialogFragment dialogFragment = new MyDialogFragment();
     dialogFragment.show(getSupportFragmentManager(), "");
+  }
+
+  @OnClick(R.id.bt_cusdialog)
+  public void showcusDialog() {
+    CustomDialogs customDialogs = new CustomDialogs(this);
+    customDialogs.show();
   }
 
   @OnClick(R.id.bt_addBtnDialog)
