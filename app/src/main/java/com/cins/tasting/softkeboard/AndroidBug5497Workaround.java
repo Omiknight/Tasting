@@ -1,4 +1,4 @@
-package com.cins.tasting.tryto;
+package com.cins.tasting.softkeboard;
 
 import android.app.Activity;
 import android.graphics.Rect;

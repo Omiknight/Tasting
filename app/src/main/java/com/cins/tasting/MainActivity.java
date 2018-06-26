@@ -12,7 +12,7 @@ import com.cins.tasting.bottomsheets.MyBottomSheetsActivity;
 import com.cins.tasting.dialog.MyDialogActivity;
 import com.cins.tasting.scrollview.ScrollViewActivity;
 import com.cins.tasting.textview.MyTextView;
-import com.cins.tasting.tryto.KeyboardPanel;
+import com.cins.tasting.softkeboard.KeyboardPanel;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -54,6 +54,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
       case R.id.bt_scrollview:
         intent = new Intent(this, ScrollViewActivity.class);
         startActivity(intent);
+        break;
+      case R.id.bt_kb:
         break;
     }
   }

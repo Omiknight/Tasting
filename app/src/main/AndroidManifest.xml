@@ -19,7 +19,7 @@
     <activity android:name=".textview.MyTextView"/>
     <activity android:name=".dialog.MyDialogActivity"/>
     <activity android:name=".bottomsheets.MyBottomSheetsActivity"/>
-    <activity android:name=".tryto.KeyboardPanel"/>
+    <activity android:name=".softkeboard.KeyboardPanel"/>
     <activity android:name=".scrollview.ScrollViewActivity"/>
   </application>
 

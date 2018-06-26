@@ -145,6 +145,13 @@
           android:onClick="onClick"
           android:text="scrollview"
           />
+      <Button
+          android:id="@+id/bt_kb"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:onClick="onClick"
+          android:text="KeyBoard"
+          />
     </LinearLayout>
 
     <LinearLayout
