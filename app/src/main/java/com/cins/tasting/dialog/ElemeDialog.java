@@ -21,8 +21,9 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import com.cins.tasting.R;
+import com.example.jinjianping.myapplication.R;
 
-public class PowerfulDialog extends Dialog {
+public class ElemeDialog extends Dialog {
   public static final int ORIENTATION_HORIZONTAL = 0;
   public static final int ORIENTATION_VERTICAL = 1;
 
@@ -44,7 +45,7 @@ public class PowerfulDialog extends Dialog {
   private FrameLayout customContainer;
   private LinearLayout btnContainer;
 
-  private PowerfulDialog(Builder builder) {
+  private ElemeDialog(Builder builder) {
     super(builder.context);
     init(builder);
   }
@@ -72,7 +73,7 @@ public class PowerfulDialog extends Dialog {
 
   private void init(final Builder builder) {
     requestWindowFeature(Window.FEATURE_NO_TITLE);
-    setContentView(R.layout.design_dialog_eleme);
+    setContentView(R.layout.design_dialog);
     titleView = findViewById(R.id.title);
     contentView = findViewById(R.id.content);
     tipsView = findViewById(R.id.tips);
@@ -112,7 +113,7 @@ public class PowerfulDialog extends Dialog {
       negativeBtn.setOnClickListener(new View.OnClickListener() {
         @Override public void onClick(View v) {
           if (builder.negativeClickListener != null) {
-            builder.negativeClickListener.onClick(PowerfulDialog.this);
+            builder.negativeClickListener.onClick(ElemeDialog.this);
           } else {
             dismiss();
           }
@@ -133,7 +134,7 @@ public class PowerfulDialog extends Dialog {
       positiveBtn.setOnClickListener(new View.OnClickListener() {
         @Override public void onClick(View v) {
           if (builder.positiveClickListener != null) {
-            builder.positiveClickListener.onClick(PowerfulDialog.this);
+            builder.positiveClickListener.onClick(ElemeDialog.this);
           } else {
             dismiss();
           }
@@ -176,7 +177,7 @@ public class PowerfulDialog extends Dialog {
       closeBtn.setOnClickListener(new View.OnClickListener() {
         @Override public void onClick(View v) {
           if (builder.closeClickListener != null) {
-            builder.closeClickListener.onClick(PowerfulDialog.this);
+            builder.closeClickListener.onClick(ElemeDialog.this);
             return;
           }
           dismiss();
@@ -338,8 +339,8 @@ public class PowerfulDialog extends Dialog {
       return this;
     }
 
-    public PowerfulDialog build() {
-      return new PowerfulDialog(this);
+    public ElemeDialog build() {
+      return new ElemeDialog(this);
     }
 
     public void show() {
@@ -348,6 +349,6 @@ public class PowerfulDialog extends Dialog {
   }
 
   public interface OnClickListener {
-    void onClick(PowerfulDialog v);
+    void onClick(ElemeDialog v);
   }
 }

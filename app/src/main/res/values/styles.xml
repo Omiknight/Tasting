@@ -8,4 +8,59 @@
     <item name="colorAccent">@color/colorAccent</item>
   </style>
 
+  <!--自定义RatingBar Color-->
+  <style name="RatingBar_CustomColor" parent="@android:style/Widget.Holo.RatingBar.Indicator">
+    <!--Background Color-->
+    <item name="colorControlNormal">#D7D7D7</item>
+    <!--Progress Color-->
+    <item name="colorControlActivated">#F49800</item>
+  </style>
+
+  <style name="roomRatingBar" parent="@android:style/Widget.RatingBar">
+    <item name="android:minHeight">14dip</item>
+    <item name="android:maxHeight">14dip</item>
+  </style>
+
+  <style name="MyRatingBar" parent="@android:style/Widget.RatingBar">
+    <item name="android:minHeight">14dip</item>
+    <item name="android:maxHeight">14dip</item>
+  </style>
+
+
+  <declare-styleable name="StarRatingBar">
+    <attr name="defaultStar" format="reference"/>
+    <attr name="star" format="reference"/>
+    <attr name="defaultStarColor" format="color"/>
+    <attr name="starColor" format="color"/>
+    <attr name="numStars" format="integer"/>
+    <attr name="stepSize" format="float"/>
+    <attr name="starGap" format="dimension"/>
+    <attr name="starSize" format="dimension"/>
+    <attr name="rating" format="float"/>
+    <attr name="isIndicator" format="boolean"/>
+  </declare-styleable>
+
+  <!-- 全透明弹框背景 -->
+  <style name="transparentBackgroundDiaolg" parent="@android:style/Theme.Dialog">
+    <item name="android:windowFrame">@null</item><!--边框-->
+    <item name="android:windowIsFloating">true</item><!--是否浮现在activity之上-->
+    <item name="android:windowIsTranslucent">false</item><!--半透明-->
+    <item name="android:windowNoTitle">true</item><!--无标题-->
+    <item name="android:windowBackground">@android:color/transparent</item><!--背景透明-->
+    <item name="android:backgroundDimEnabled">false</item><!--模糊-->
+  </style>
+
+  <style name="anim_dialog_slide_from_bottom" parent="android:Animation">
+    <item name="android:windowEnterAnimation">@anim/slide_bottom_fade_in</item>
+    <item name="android:windowExitAnimation">@anim/slide_bottom_fade_out</item>
+  </style>
+
+  <style name="CustomProgressBar_Small">
+    <item name="android:indeterminateDrawable">@drawable/progress_small_holo</item>
+    <item name="android:minWidth">27dip</item>
+    <item name="android:maxWidth">27dip</item>
+    <item name="android:minHeight">27dip</item>
+    <item name="android:maxHeight">27dip</item>
+  </style>
+
 </resources>

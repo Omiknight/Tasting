@@ -9,12 +9,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 import com.cins.tasting.bottomsheets.MyBottomSheetsActivity;
+import com.cins.tasting.coordinatorLayout.CoordinatorLayoutActivity;
 import com.cins.tasting.dialog.MyDialogActivity;
+import com.cins.tasting.picture.PictureActivity;
 import com.cins.tasting.scrollview.ScrollViewActivity;
 import com.cins.tasting.textview.MyTextView;
 import com.cins.tasting.softkeboard.KeyboardPanel;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +32,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         intent = new Intent(this, MyTextView.class);
         startActivity(intent);
         break;
+      case R.id.coordinatorLayout:
+        intent = new Intent(this, CoordinatorLayoutActivity.class);
+        startActivity(intent);
+        break;
+      case R.id.pic_bt:
+        intent = new Intent(this, PictureActivity.class);
+        startActivity(intent);
       case R.id.bt_imageview:
         break;
       case R.id.bt_viewpage:
@@ -56,16 +65,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         startActivity(intent);
         break;
       case R.id.bt_kb:
+      default:
         break;
     }
   }
 
   @Override public boolean onCreateOptionsMenu(Menu menu) {
     MenuItem item = menu.add(Menu.NONE, 0, Menu.NONE, "删除");
-    MenuItemCompat.setShowAsAction(item,MenuItem.SHOW_AS_ACTION_ALWAYS);
+    MenuItemCompat.setShowAsAction(item, MenuItem.SHOW_AS_ACTION_ALWAYS);
     return super.onCreateOptionsMenu(menu);
   }
-
 
   //public boolean onOptionsItemSelected(MenuItem item) {
   //  if (item.getItemId() == 0 && deliverAddress != null) {

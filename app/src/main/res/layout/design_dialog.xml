@@ -128,7 +128,7 @@
       android:layout_below="@+id/dialog_container"
       android:layout_centerHorizontal="true"
       android:layout_marginTop="30dp"
-      android:src="@mipmap/design_ic_dialog_close"
+      android:src="@drawable/design_ic_dialog_close"
       />
 
 </RelativeLayout>

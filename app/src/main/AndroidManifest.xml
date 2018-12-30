@@ -2,6 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.cins.tasting">
 
+
+  <uses-permission android:name="android.permission.INTERNET"/>
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
   <application
       android:allowBackup="true"
       android:icon="@mipmap/ic_launcher"
@@ -21,6 +27,8 @@
     <activity android:name=".bottomsheets.MyBottomSheetsActivity"/>
     <activity android:name=".softkeboard.KeyboardPanel"/>
     <activity android:name=".scrollview.ScrollViewActivity"/>
+    <activity android:name=".picture.PictureActivity"/>
+    <activity android:name=".coordinatorLayout.CoordinatorLayoutActivity" android:theme="@style/Theme.Design.NoActionBar"/>
   </application>
 
 </manifest>

@@ -21,10 +21,13 @@ import android.text.style.UnderlineSpan;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.cins.tasting.R;
 import com.cins.tasting.R2;
 import java.util.List;
@@ -42,12 +45,14 @@ public class MyTextView extends AppCompatActivity {
   @BindView(R2.id.text) public TextView text;
   @BindView(R2.id.edit) public EditText edit;
   @BindView(R2.id.container) public LinearLayout con;
+  @BindView(R.id.pic) protected ImageView imageView;
 
   @Override protected void onCreate(@Nullable Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.textview);
     ButterKnife.bind(this);
 
+    loadPic();
     textView.setCompoundDrawablesWithIntrinsicBounds(R.mipmap.ic_launcher, 0, 0, 0);
 
     //mode1();
@@ -82,6 +87,15 @@ public class MyTextView extends AppCompatActivity {
     } else {
       edit.setVisibility(View.GONE);
     }
+  }
+
+  private void loadPic() {
+
+    RequestOptions options = new RequestOptions().placeholder(R.mipmap.ic_launcher);
+    Glide.with(this)
+        .load("http://i.imgur.com/rFLNqWI.jpg")
+        .apply(options)
+        .into(imageView);
   }
 
   /**
@@ -175,19 +189,19 @@ public class MyTextView extends AppCompatActivity {
     //ImageSpan imageSpan = new ImageSpan(this, R.mipmap.ic_launcher);
     //也可以这样
 
-    Drawable drawable = getResources().getDrawable(R.drawable.bk_icon_question_mark_regular);
+    Drawable drawable = getResources().getDrawable(R.drawable.icon_question_mark_regular);
     drawable.setBounds(0, 0, drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight());
     ImageSpan imageSpan1 = new ImageSpan(drawable, DynamicDrawableSpan.ALIGN_BASELINE);
 
     CenteredImageSpan imageSpan2 =
-        new CenteredImageSpan(this, R.drawable.bk_icon_question_mark_regular);
+        new CenteredImageSpan(this, R.drawable.icon_question_mark_regular);
     //CustomImageSpan imageSpan1 = new CustomImageSpan(this,R.mipmap.ic_launcher,2);
     //将index为6、7的字符用图片替代
     spannableString.setSpan(imageSpan1, 0, 1,
         Spannable.SPAN_INCLUSIVE_INCLUSIVE);
     spannableString.append(" ");
 
-    Drawable drawable1 = getResources().getDrawable(R.drawable.bk_icon_question_mark_regular);
+    Drawable drawable1 = getResources().getDrawable(R.drawable.icon_question_mark_regular);
     drawable.setBounds(0, 0, drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight());
     ImageSpan imageSpan3 = new ImageSpan(drawable1, DynamicDrawableSpan.ALIGN_BASELINE);
     spannableString.setSpan(imageSpan3, 1, 2,
@@ -228,7 +242,7 @@ public class MyTextView extends AppCompatActivity {
     ////ImageSpan imageSpan = new ImageSpan(this, R.mipmap.ic_launcher);
     ////也可以这样
     //
-    //Drawable drawable = getResources().getDrawable(R.drawable.bk_icon_question_mark_regular);
+    //Drawable drawable = getResources().getDrawable(R.drawable.icon_question_mark_regular);
     //drawable.setBounds(0, 0, drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight());
     //ImageSpan imageSpan1 = new ImageSpan(drawable, DynamicDrawableSpan.ALIGN_BASELINE);
     //
@@ -236,7 +250,7 @@ public class MyTextView extends AppCompatActivity {
     //    Spannable.SPAN_INCLUSIVE_INCLUSIVE);
     ////spannableString.append("   ");
     //
-    //Drawable drawable1 = getResources().getDrawable(R.drawable.bk_icon_question_mark_regular);
+    //Drawable drawable1 = getResources().getDrawable(R.drawable.icon_question_mark_regular);
     //drawable.setBounds(0, 0, drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight());
     //ImageSpan imageSpan3 = new ImageSpan(drawable1, DynamicDrawableSpan.ALIGN_BASELINE);
     //spannableString.setSpan(imageSpan3,1 ,2 ,

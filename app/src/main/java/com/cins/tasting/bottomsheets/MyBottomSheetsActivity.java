@@ -23,6 +23,7 @@ public class MyBottomSheetsActivity extends AppCompatActivity {
 
     View bottomSheet = findViewById(R.id.bottom_sheet);
     behavior = BottomSheetBehavior.from(bottomSheet);
+    behavior.setHideable(false);
     behavior.setBottomSheetCallback(new BottomSheetBehavior.BottomSheetCallback() {
       @Override public void onStateChanged(@NonNull View bottomSheet, int newState) {
         //这里是bottomSheet状态的改变
